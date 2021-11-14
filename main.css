@@ -1,0 +1,250 @@
+
+
+* {
+    margin: 0;
+}
+body {
+    background-image: url("https://i0.wp.com/blog.jandi.com/ko/wp-content/uploads/sites/4/2017/01/woman-typing-writing-windows.jpg");
+}
+
+header {
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.main_header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+.main {
+    display: flex;
+    width: 660.312px;   
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.main_header > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_header > div > div > a {
+    text-decoration: none;
+    color: rgb(241, 253, 255);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 45px;
+    padding: 5px 0;
+}
+
+.menu_header {
+    margin: 0;
+    background-color: rgb(255, 255, 255, 0.2);
+    /* background: linear-gradient(to right, #feda75,#fa7e1e,	#d62976,#962fbf,#4f5bd5); */
+}
+
+.menu_header > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_bar {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+    padding-left: 0;
+    /* border-left: 3px;
+    border-left-style: solid;
+    border-left-color: gray;
+    border-right: 3px;
+    border-right-style: solid;
+    border-right-color: gray; */
+}
+
+.menu_bar > li {
+    display: flex;
+    text-decoration: none;
+    padding: 15px 35px ;
+}
+
+.menu_bar > li:hover {
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.menu_header > div > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 1000;
+}
+
+input[id="sidebar"] {
+    display:none;
+}
+
+input[id="sidebar"] + label {
+    display:block;
+    justify-content: center;
+    align-self: center;
+    width:40px;
+    height:40px;
+    position:relative;
+    cursor:pointer;
+}
+
+input[id="sidebar"] + label span {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:5px;
+    border-radius:30px;
+    background: rgb(241, 253, 255);
+    transition:all .35s;
+}
+
+input#sidebar + label span:nth-child(1) {
+    top:0;
+}
+
+input#sidebar + label span:nth-child(2) {
+    top:50%;
+    transform:translateY(-50%);
+} 
+
+input#sidebar + label span:nth-child(3) {
+    bottom:0;
+}
+
+input#sidebar:checked + label {
+    z-index:2;
+}
+
+input#sidebar:checked + label span {
+    background:rgb(241, 253, 255);
+}
+
+input#sidebar:checked + label span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%) rotate(45deg);
+}
+
+input#sidebar:checked + label span:nth-child(2) {
+    opacity:0;
+}
+
+input#sidebar:checked + label span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+
+.sidebarmenu {
+    display: none;
+}
+
+div[class="sidebar"] {
+    text-align: center;
+    width: 400px;
+    height:100%;
+    background: white;
+    position:absolute;
+    top: 0;
+    right: -100%;
+    z-index: -1;
+    transition:all .35s;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.icon {
+    list-style: none;
+    font-size: 30px;
+    display: none;
+    
+}
+
+.icon_1 {
+    color: rgb(56, 56, 248);
+}
+
+.icon_2 {
+    color: rgb(48, 48, 230);
+}
+
+input#sidebar:checked + label + div {
+    right: 0;
+    z-index: 1;
+}
+
+
+@media screen and (max-width: 770px) {
+    .menu_header {
+        height: 15px;
+    }
+    .menu_header > div {
+        display: none;
+    }
+
+    .main_header {
+        border-bottom: 16px ;
+    }
+
+    .main_header > div > div > a {
+        font-size: 40px;
+    }
+
+    div[class="sidebar"] {
+        width: 100%;
+        height:50%;
+        left: 0;
+    }
+}
+
+.img_1 {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: aquamarine;
+    z-index: 1;
+}
+
+
+.p1 {
+    display: none;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.p2 {
+    display: none;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;  
+    font-weight: 900;
+    font-size: 55px;
+}
+
+.main_section {
+    margin: 0;
+
+}
+
+.ex {
+    position: relative;
+    background-color: aquamarine;
+    width: 100%;
+    height: 500px;
+    z-index: -5;
+}
